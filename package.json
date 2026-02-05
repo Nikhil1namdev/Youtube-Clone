@@ -1,0 +1,17 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "this is a ful stack youtube clone project",
+  "keywords": [
+    "javascript",
+    "backend",
+    "frontend"
+  ],
+  "license": "ISC",
+  "author": "Nikhil Namdev",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm "
+  }
+}
