@@ -1,9 +1,11 @@
-const asyncHandler=()=>{
 
-    return 
-}
+//1st way to use asyncHandler
+// const asyncHandler=()=>{
 
-export default asyncHandler
+//     return 
+// }
+
+// export default asyncHandler
 
 
 //2nd way using try catch
@@ -24,11 +26,12 @@ export default asyncHandler
 
 //3rd way is promises
 
-// const asyncHandler=(requestHandler)=>{
-//     (req,res,next)=>{
-//        Promise.resolve(requestHandler(req,res,next)).catch((err)=>{
-//         next(err)
-//        })
-//     }
+const asyncHandler=(requestHandler)=>{
+    return (req,res,next)=>{
+       Promise.resolve(requestHandler(req,res,next)).catch((err)=>{
+        next(err)
+       })
+    }
    
-// }
+}
+export default asyncHandler
